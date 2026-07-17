@@ -40,7 +40,7 @@ Berikut adalah relasi antar tabel yang digunakan pada sistem SnapFix:
 
 Backend SnapFix menyediakan beberapa endpoint utama untuk kebutuhan operasional aplikasi mobile. Semua request setelah login memerlukan header `Authorization: Bearer <your_jwt_token>`.
 
-> 💡 **API Collection:** Dikarenakan batasan limitasi cloud pada Postman, dokumentasi API disediakan dalam bentuk file JSON offline yang dapat langsung Anda impor ke Postman, Bruno, atau Thunder Client.
+> 💡 **API Collection:** Dikarenakan batasan limitasi cloud pada Postman, dokumentasi API disediakan dalam bentuk file JSON offline yang dapat langsung Anda impor ke Postman.
 > 
 > File collection dapat diakses di: **[routes/postman/SnapFix.postman_collection.json](./routes/postman/SnapFix.postman_collection.json)** 
 
