@@ -4,7 +4,7 @@
 
 # 🖥️ SnapFix - RESTful API Backend
 
-[![Laravel Version](https://img.shields.io/badge/Laravel-v11.x-red.svg)](https://laravel.com)
+[![Laravel Version](https://img.shields.io/badge/Laravel-v12.x-red.svg)](https://laravel.com)
 [![PHP Version](https://img.shields.io/badge/PHP-v8.2-blue.svg)](https://php.net)
 [![Database](https://img.shields.io/badge/Database-MySQL-blue.svg)](https://www.mysql.com)
 [![Authentication](https://img.shields.io/badge/Auth-JWT-gold.svg)](https://jwt.io/)
