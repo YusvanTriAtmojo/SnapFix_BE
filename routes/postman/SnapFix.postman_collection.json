@@ -1,0 +1,4925 @@
+{
+  "info": {
+    "_postman_id": "fcedc62d-15bd-4946-9b93-2c33b2135661",
+    "name": "SnapFix",
+    "description": "# 📄 Get started here\n\nThis template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n## 🔖 How to use this template\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39195452",
+    "_collection_link": "https://go.postman.co/collection/39195452-fcedc62d-15bd-4946-9b93-2c33b2135661?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"joko@mail.com\",\r\n    \"password\": \"andy123!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"joko@mail.com\",\r\n    \"password\": \"andy123!\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:40:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Login berhasil\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Joko Oke\",\n        \"email\": \"joko@mail.com\",\n        \"role\": \"teknisi\",\n        \"id_project\": 2,\n        \"akses\": [\n            \"create_kerusakan\",\n            \"read_kerusakan\",\n            \"update_kerusakan\",\n            \"create_perbaikan\",\n            \"delete_kerusakan\",\n            \"read_lokasi\",\n            \"read_fasilitas\"\n        ],\n        \"nama_project\": \"Outdoor\",\n        \"token\": \"{{json_web_token}}\"\n    }\n}"
+            },
+            {
+              "name": "Login Gagal",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"andy123!\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:41:31 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Email atau password salah\",\n    \"status_code\": 401,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Me Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/me",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:36:25 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User ditemukan\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Joko Oke\",\n        \"email\": \"joko@mail.com\",\n        \"role\": \"teknisi\",\n        \"akses\": [\n            \"create_kerusakan\",\n            \"read_kerusakan\",\n            \"update_kerusakan\",\n            \"create_perbaikan\",\n            \"delete_kerusakan\",\n            \"read_lokasi\",\n            \"read_fasilitas\"\n        ],\n        \"id_project\": null,\n        \"nama_project\": \"Outdoor\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {token}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"joko@mail.com\",\r\n    \"password\": \"andy123!\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Logout Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {token}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"joko@mail.com\",\r\n    \"password\": \"andy123!\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:47:12 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Logout berhasil\",\n    \"status_code\": 200,\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ],
+      "description": "The `/me` endpoints let you manage information about the authenticated user."
+    },
+    {
+      "name": "Role",
+      "item": [
+        {
+          "name": "Get All Role",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Role Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {token}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/role",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "role"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:52:56 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data role berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nama_role\": \"admin\"\n        },\n        {\n            \"id\": 3,\n            \"nama_role\": \"klien\"\n        },\n        {\n            \"id\": 2,\n            \"nama_role\": \"teknisi\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All Role Gagal",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {token}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/role",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "role"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 12:53:38 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): read_role\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Project",
+      "item": [
+        {
+          "name": "Get All Project",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {token}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/project",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "project"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Project Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {token}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/project",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:02:24 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data project berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nama_project\": \"Indoor\"\n        },\n        {\n            \"id\": 2,\n            \"nama_project\": \"Outdoor\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All Project Gagal",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {token}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:8000/api/project",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:11:38 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): read_project\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Project",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama_project\": \"Project Baru\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/project",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "project"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Project Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nama_project\": \"Project Baru\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/project",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:03:16 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Project berhasil ditambahkan\",\n    \"status_code\": 201,\n    \"data\": {\n        \"id\": 3,\n        \"nama_project\": \"Project Baru\"\n    }\n}"
+            },
+            {
+              "name": "Create Project Duplicate",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nama_project\": \"Project Baru\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/project",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:04:02 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama Project sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Project",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama_project\": \"Project 5\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/project/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "project",
+                "5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Project Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nama_project\": \"Project Update\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/project/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:06:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Project berhasil diubah\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 3,\n        \"nama_project\": \"Project Update\"\n    }\n}"
+            },
+            {
+              "name": "Update Project Duplicate",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nama_project\": \"Indoor\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/project/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "3"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:07:36 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama project sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            },
+            {
+              "name": "Update Project Tidak Ada",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nama_project\": \"Project 5\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/project/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "5"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:08:15 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Project tidak ditemukan\",\n    \"status_code\": 404\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Project",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/project/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "project",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Project Sukses",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/project/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:09:43 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"project berhasil dihapus\",\n    \"status_code\": 200\n}"
+            },
+            {
+              "name": "Delete Project Tidak Ada",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/project/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "5"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:10:18 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 404,\n    \"message\": \"project tidak ditemukan\"\n}"
+            },
+            {
+              "name": "Delete Project Digunakan",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/project/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "project",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:10:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 400,\n    \"message\": \"Project tidak bisa di hapus karena telah digunakan di kerusakan\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Akses",
+      "item": [
+        {
+          "name": "Get All Akses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/akses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "akses"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Akses Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/akses",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "akses"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:14:04 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data akses berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nama_akses\": \"admin\"\n        },\n        {\n            \"id\": 16,\n            \"nama_akses\": \"create_akses\"\n        },\n        {\n            \"id\": 9,\n            \"nama_akses\": \"create_fasilitas\"\n        },\n        {\n            \"id\": 2,\n            \"nama_akses\": \"create_kerusakan\"\n        },\n        {\n            \"id\": 12,\n            \"nama_akses\": \"create_lokasi\"\n        },\n        {\n            \"id\": 6,\n            \"nama_akses\": \"create_perbaikan\"\n        },\n        {\n            \"id\": 29,\n            \"nama_akses\": \"create_project\"\n        },\n        {\n            \"id\": 24,\n            \"nama_akses\": \"create_roleakses\"\n        },\n        {\n            \"id\": 20,\n            \"nama_akses\": \"create_user\"\n        },\n        {\n            \"id\": 18,\n            \"nama_akses\": \"delete_akses\"\n        },\n        {\n            \"id\": 11,\n            \"nama_akses\": \"delete_fasilitas\"\n        },\n        {\n            \"id\": 5,\n            \"nama_akses\": \"delete_kerusakan\"\n        },\n        {\n            \"id\": 14,\n            \"nama_akses\": \"delete_lokasi\"\n        },\n        {\n            \"id\": 31,\n            \"nama_akses\": \"delete_project\"\n        },\n        {\n            \"id\": 26,\n            \"nama_akses\": \"delete_roleakses\"\n        },\n        {\n            \"id\": 22,\n            \"nama_akses\": \"delete_user\"\n        },\n        {\n            \"id\": 15,\n            \"nama_akses\": \"read_akses\"\n        },\n        {\n            \"id\": 7,\n            \"nama_akses\": \"read_fasilitas\"\n        },\n        {\n            \"id\": 3,\n            \"nama_akses\": \"read_kerusakan\"\n        },\n        {\n            \"id\": 8,\n            \"nama_akses\": \"read_lokasi\"\n        },\n        {\n            \"id\": 28,\n            \"nama_akses\": \"read_project\"\n        },\n        {\n            \"id\": 27,\n            \"nama_akses\": \"read_role\"\n        },\n        {\n            \"id\": 23,\n            \"nama_akses\": \"read_roleakses\"\n        },\n        {\n            \"id\": 19,\n            \"nama_akses\": \"read_user\"\n        },\n        {\n            \"id\": 17,\n            \"nama_akses\": \"update_akses\"\n        },\n        {\n            \"id\": 10,\n            \"nama_akses\": \"update_fasilitas\"\n        },\n        {\n            \"id\": 4,\n            \"nama_akses\": \"update_kerusakan\"\n        },\n        {\n            \"id\": 13,\n            \"nama_akses\": \"update_lokasi\"\n        },\n        {\n            \"id\": 30,\n            \"nama_akses\": \"update_project\"\n        },\n        {\n            \"id\": 25,\n            \"nama_akses\": \"update_roleakses\"\n        },\n        {\n            \"id\": 21,\n            \"nama_akses\": \"update_user\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All Akses Gagal",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/akses",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "akses"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:14:56 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): read_akses\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lokasi",
+      "item": [
+        {
+          "name": "Get All Lokasi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/lokasi",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "lokasi"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Lokasi Semua",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:17:34 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data Lokasi berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"id_project\": 1,\n            \"nama_project\": \"Indoor\",\n            \"nama_lokasi\": \"Ruang Meeting\"\n        },\n        {\n            \"id\": 3,\n            \"id_project\": 2,\n            \"nama_project\": \"Outdoor\",\n            \"nama_lokasi\": \"Lapangan Parkir\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All Lokasi Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi?id_project=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi"
+                  ],
+                  "query": [
+                    {
+                      "key": "id_project",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:20:23 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data Lokasi berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"id_project\": 1,\n            \"nama_project\": \"Indoor\",\n            \"nama_lokasi\": \"Ruang Meeting\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Lokasi Dropdown",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Lokasi Dropdown Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:24:15 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data lokasi berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"nama_lokasi\": \"Lapangan Parkir\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Lokasi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung C\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/lokasi",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "lokasi"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Lokasi Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung C\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:30:36 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Lokasi berhasil ditambahkan\",\n    \"status_code\": 201,\n    \"data\": {\n        \"id\": 4,\n        \"id_project\": 1,\n        \"nama_lokasi\": \"Gedung C\"\n    }\n}"
+            },
+            {
+              "name": "Create Lokasi Duplicate",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung C\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:31:19 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama lokasi sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Lokasi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung A\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/lokasi/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "lokasi",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Lokasi Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung A\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:34:55 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Lokasi berhasil diubah\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 4,\n        \"id_project\": 1,\n        \"nama_lokasi\": \"Gedung A\"\n    }\n}"
+            },
+            {
+              "name": "Update Lokasi Duplicate",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Ruang Meeting\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "4"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:36:03 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama lokasi sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            },
+            {
+              "name": "Update Lokasi Tidak Ada",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_lokasi\": \"Gedung B\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/6",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "6"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:37:21 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Lokasi tidak ditemukan\",\n    \"status_code\": 404\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Lokasi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/lokasi/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "lokasi",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Lokasi Sukses",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:38:38 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Lokasi berhasil dihapus\",\n    \"status_code\": 200\n}"
+            },
+            {
+              "name": "Delete Lokasi Tidak Ada",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/6",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "6"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:39:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 404,\n    \"message\": \"Lokasi tidak ditemukan\"\n}"
+            },
+            {
+              "name": "Delete  Lokasi Digunakan",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/lokasi/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "lokasi",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:39:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 400,\n    \"message\": \"Lokasi tidak bisa di hapus karena telah digunakan di kerusakan\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fasilitas",
+      "item": [
+        {
+          "name": "Get All Fasilitas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/fasilitas?id_project=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fasilitas"
+              ],
+              "query": [
+                {
+                  "key": "id_project",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Fasilitas Semua",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:54:35 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data fasilitas berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"id_project\": 1,\n            \"nama_project\": \"Indoor\",\n            \"nama_fasilitas\": \"Pendingin Ruangan\"\n        },\n        {\n            \"id\": 10,\n            \"id_project\": 2,\n            \"nama_project\": \"Outdoor\",\n            \"nama_fasilitas\": \"Lampu Penerangan\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All Fasilitas Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas?id_project=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas"
+                  ],
+                  "query": [
+                    {
+                      "key": "id_project",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 13:57:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data fasilitas berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"id_project\": 1,\n            \"nama_project\": \"Indoor\",\n            \"nama_fasilitas\": \"Pendingin Ruangan\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Fasilitas Dropdown",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/fasilitas/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fasilitas",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Fasilitas Dropdown Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:00:43 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data fasilitas berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 10,\n            \"nama_fasilitas\": \"Lampu Penerangan\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Fasilitas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Wastafel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/fasilitas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fasilitas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Fasilitas Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Wastafel\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:02:39 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Fasilitas berhasil ditambahkan\",\n    \"status_code\": 201,\n    \"data\": {\n        \"id\": 11,\n        \"id_project\": 1,\n        \"nama_fasilitas\": \"Wastafel\"\n    }\n}"
+            },
+            {
+              "name": "Create Fasilitas Duplicate",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Pendingin Ruangan\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:03:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama fasilitas sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Fasilitas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Wastafel 2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/fasilitas/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fasilitas",
+                "11"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Fasilitas Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Wastafel 2\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/11",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "11"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:05:57 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Fasilitas berhasil diubah\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 11,\n        \"id_project\": 1,\n        \"nama_fasilitas\": \"Wastafel 2\"\n    }\n}"
+            },
+            {
+              "name": "Update Fasilitas Duplicate",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Pendingin Ruangan\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/11",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "11"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:06:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Nama fasilitas sudah ada\",\n    \"status_code\": 409,\n    \"data\": null\n}"
+            },
+            {
+              "name": "Update Fasilitas Tidak Ada",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"nama_fasilitas\": \"Tempat Sampah\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/13",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "13"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:07:34 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Fasilitas tidak ditemukan\",\n    \"status_code\": 404\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Fasilitas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/fasilitas/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fasilitas",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Fasilitas Sukses",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/11",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "11"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:09:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Fasilitas berhasil dihapus\",\n    \"status_code\": 200\n}"
+            },
+            {
+              "name": "Delete Fasilitas Tidak Ada",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/13",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "13"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:10:05 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 404,\n    \"message\": \"Fasilitas tidak ditemukan\"\n}"
+            },
+            {
+              "name": "Delete Fasilitas Digunakan",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/fasilitas/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "fasilitas",
+                    "2"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:10:45 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status_code\": 400,\n    \"message\": \"Fasilitas tidak bisa di hapus karena telah digunakan di kerusakan\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Role Akses",
+      "item": [
+        {
+          "name": "Role Akses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/roleakses?filterRole=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "roleakses"
+              ],
+              "query": [
+                {
+                  "key": "filterRole",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Role Akses Semua",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/roleakses",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "roleakses"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:13:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data role akses berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id_role\": 1,\n            \"nama_role\": \"admin\",\n            \"akses\": [\n                {\n                    \"id_role_akses\": 215,\n                    \"id_akses\": 11,\n                    \"nama_akses\": \"delete_fasilitas\"\n                },\n                {\n                    \"id_role_akses\": 224,\n                    \"id_akses\": 19,\n                    \"nama_akses\": \"read_user\"\n                },\n                {\n                    \"id_role_akses\": 225,\n                    \"id_akses\": 17,\n                    \"nama_akses\": \"update_akses\"\n                },\n                {\n                    \"id_role_akses\": 226,\n                    \"id_akses\": 10,\n                    \"nama_akses\": \"update_fasilitas\"\n                },\n                {\n                    \"id_role_akses\": 227,\n                    \"id_akses\": 20,\n                    \"nama_akses\": \"create_user\"\n                },\n                {\n                    \"id_role_akses\": 228,\n                    \"id_akses\": 30,\n                    \"nama_akses\": \"update_project\"\n                },\n                {\n                    \"id_role_akses\": 229,\n                    \"id_akses\": 25,\n                    \"nama_akses\": \"update_roleakses\"\n                },\n                {\n                    \"id_role_akses\": 230,\n                    \"id_akses\": 15,\n                    \"nama_akses\": \"read_akses\"\n                },\n                {\n                    \"id_role_akses\": 231,\n                    \"id_akses\": 31,\n                    \"nama_akses\": \"delete_project\"\n                },\n                {\n                    \"id_role_akses\": 232,\n                    \"id_akses\": 26,\n                    \"nama_akses\": \"delete_roleakses\"\n                },\n                {\n                    \"id_role_akses\": 233,\n                    \"id_akses\": 22,\n                    \"nama_akses\": \"delete_user\"\n                },\n                {\n                    \"id_role_akses\": 234,\n                    \"id_akses\": 3,\n                    \"nama_akses\": \"read_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 207,\n                    \"id_akses\": 16,\n                    \"nama_akses\": \"create_akses\"\n                },\n                {\n                    \"id_role_akses\": 208,\n                    \"id_akses\": 9,\n                    \"nama_akses\": \"create_fasilitas\"\n                },\n                {\n                    \"id_role_akses\": 209,\n                    \"id_akses\": 21,\n                    \"nama_akses\": \"update_user\"\n                },\n                {\n                    \"id_role_akses\": 210,\n                    \"id_akses\": 12,\n                    \"nama_akses\": \"create_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 211,\n                    \"id_akses\": 29,\n                    \"nama_akses\": \"create_project\"\n                },\n                {\n                    \"id_role_akses\": 212,\n                    \"id_akses\": 13,\n                    \"nama_akses\": \"update_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 213,\n                    \"id_akses\": 24,\n                    \"nama_akses\": \"create_roleakses\"\n                },\n                {\n                    \"id_role_akses\": 214,\n                    \"id_akses\": 18,\n                    \"nama_akses\": \"delete_akses\"\n                },\n                {\n                    \"id_role_akses\": 235,\n                    \"id_akses\": 1,\n                    \"nama_akses\": \"admin\"\n                },\n                {\n                    \"id_role_akses\": 216,\n                    \"id_akses\": 5,\n                    \"nama_akses\": \"delete_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 217,\n                    \"id_akses\": 14,\n                    \"nama_akses\": \"delete_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 218,\n                    \"id_akses\": 2,\n                    \"nama_akses\": \"create_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 219,\n                    \"id_akses\": 7,\n                    \"nama_akses\": \"read_fasilitas\"\n                },\n                {\n                    \"id_role_akses\": 220,\n                    \"id_akses\": 8,\n                    \"nama_akses\": \"read_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 221,\n                    \"id_akses\": 28,\n                    \"nama_akses\": \"read_project\"\n                },\n                {\n                    \"id_role_akses\": 222,\n                    \"id_akses\": 27,\n                    \"nama_akses\": \"read_role\"\n                },\n                {\n                    \"id_role_akses\": 223,\n                    \"id_akses\": 23,\n                    \"nama_akses\": \"read_roleakses\"\n                }\n            ]\n        },\n        {\n            \"id_role\": 2,\n            \"nama_role\": \"teknisi\",\n            \"akses\": [\n                {\n                    \"id_role_akses\": 50,\n                    \"id_akses\": 2,\n                    \"nama_akses\": \"create_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 51,\n                    \"id_akses\": 3,\n                    \"nama_akses\": \"read_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 52,\n                    \"id_akses\": 4,\n                    \"nama_akses\": \"update_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 53,\n                    \"id_akses\": 6,\n                    \"nama_akses\": \"create_perbaikan\"\n                },\n                {\n                    \"id_role_akses\": 54,\n                    \"id_akses\": 5,\n                    \"nama_akses\": \"delete_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 55,\n                    \"id_akses\": 8,\n                    \"nama_akses\": \"read_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 56,\n                    \"id_akses\": 7,\n                    \"nama_akses\": \"read_fasilitas\"\n                }\n            ]\n        },\n        {\n            \"id_role\": 3,\n            \"nama_role\": \"klien\",\n            \"akses\": [\n                {\n                    \"id_role_akses\": 2,\n                    \"id_akses\": 5,\n                    \"nama_akses\": \"delete_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 15,\n                    \"id_akses\": 7,\n                    \"nama_akses\": \"read_fasilitas\"\n                },\n                {\n                    \"id_role_akses\": 16,\n                    \"id_akses\": 8,\n                    \"nama_akses\": \"read_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 57,\n                    \"id_akses\": 2,\n                    \"nama_akses\": \"create_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 1,\n                    \"id_akses\": 3,\n                    \"nama_akses\": \"read_kerusakan\"\n                }\n            ]\n        }\n    ]\n}"
+            },
+            {
+              "name": "Role Akses Satu Role",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/roleakses?filterRole=2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "roleakses"
+                  ],
+                  "query": [
+                    {
+                      "key": "filterRole",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:15:06 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data role akses berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id_role\": 2,\n            \"nama_role\": \"teknisi\",\n            \"akses\": [\n                {\n                    \"id_role_akses\": 50,\n                    \"id_akses\": 2,\n                    \"nama_akses\": \"create_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 51,\n                    \"id_akses\": 3,\n                    \"nama_akses\": \"read_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 52,\n                    \"id_akses\": 4,\n                    \"nama_akses\": \"update_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 53,\n                    \"id_akses\": 6,\n                    \"nama_akses\": \"create_perbaikan\"\n                },\n                {\n                    \"id_role_akses\": 54,\n                    \"id_akses\": 5,\n                    \"nama_akses\": \"delete_kerusakan\"\n                },\n                {\n                    \"id_role_akses\": 55,\n                    \"id_akses\": 8,\n                    \"nama_akses\": \"read_lokasi\"\n                },\n                {\n                    \"id_role_akses\": 56,\n                    \"id_akses\": 7,\n                    \"nama_akses\": \"read_fasilitas\"\n                }\n            ]\n        }\n    ]\n}"
+            },
+            {
+              "name": "Role Akses Gagal",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/roleakses",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "roleakses"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:16:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): read_roleakses\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Role Akses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_akses\": [2, 3, 4, 5, 6]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/roleakses/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "roleakses",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Role Akses Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_akses\": [2, 3, 4, 5, 6]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/roleakses/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "roleakses",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:17:45 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Role akses berhasil diperbarui\",\n    \"status_code\": 200\n}"
+            },
+            {
+              "name": "Update Role Akses Gagal",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_akses\": [2, 3, 4, 5, 6, 8]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/roleakses/8",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "roleakses",
+                    "8"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 14 Jul 2026 14:19:52 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Role] 8\",\n    \"status_code\": 500\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get All User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Get All User Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 09:51:17 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data user berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"id_project\": 1,\n            \"nama_project\": \"Indoor\",\n            \"id_role\": 1,\n            \"nama_role\": \"admin\",\n            \"name\": \"Yusvan Tri Atmojo\",\n            \"nip\": 918171717,\n            \"notlp\": \"08131312131\",\n            \"alamat\": \"Plumbungan, Sumbermulyo, Bambang Lipuro, Bantul.\",\n            \"email\": \"yusvan@mail.com\"\n        },\n        {\n            \"id\": 2,\n            \"id_project\": 2,\n            \"nama_project\": \"Outdoor\",\n            \"id_role\": 2,\n            \"nama_role\": \"teknisi\",\n            \"name\": \"Joko Oke\",\n            \"nip\": 13121313414,\n            \"notlp\": \"09181617112\",\n            \"alamat\": \"Pandang, Bantul.\",\n            \"email\": \"joko@mail.com\"\n        },\n        {\n            \"id\": 3,\n            \"id_project\": 2,\n            \"nama_project\": \"Outdoor\",\n            \"id_role\": 3,\n            \"nama_role\": \"klien\",\n            \"name\": \"Paijo\",\n            \"nip\": 1213131411,\n            \"notlp\": \"0816716161\",\n            \"alamat\": \"Solo, Jawa Tengah\",\n            \"email\": \"paijo@mail.com\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get All User Gagal",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 09:51:57 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): read_user\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Get Profile Sukses",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8000/api/users/profile",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 09:53:54 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data user berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 2,\n        \"id_role\": 2,\n        \"role\": \"teknisi\",\n        \"id_project\": 2,\n        \"project\": \"Outdoor\",\n        \"nip\": 13121313414,\n        \"name\": \"Joko Oke\",\n        \"notlp\": \"09181617112\",\n        \"alamat\": \"Pandang, Bantul.\",\n        \"email\": \"joko@mail.com\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"alamat\": \"Kulon Progo\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/users/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "users",
+                "update"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Profile Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"alamat\": \"Kulon Progo\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/users/update",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "users",
+                    "update"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:18:36 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data user berhasil diperbarui\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 2,\n        \"id_role\": 2,\n        \"id_project\": 2,\n        \"name\": \"Joko Oke\",\n        \"nip\": 13121313414,\n        \"email\": \"joko@mail.com\",\n        \"alamat\": \"Kulon Progo\",\n        \"notlp\": \"09181617112\",\n        \"email_verified_at\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"id_role\": 2,\r\n    \"name\": \"Johnko\",\r\n    \"nip\": \"123456789\",\r\n    \"notlp\": \"081234567890\",\r\n    \"alamat\": \"Yogyakarta\",\r\n    \"email\": \"johnko@email.com\",\r\n    \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "user"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create User Sukses",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"id_role\": 2,\r\n    \"name\": \"Johnko\",\r\n    \"nip\": \"123456789\",\r\n    \"notlp\": \"081234567890\",\r\n    \"alamat\": \"Yogyakarta\",\r\n    \"email\": \"johnko@email.com\",\r\n    \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:08:56 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data user berhasil ditambahkan\",\n    \"status_code\": 201,\n    \"data\": {\n        \"id\": 4,\n        \"id_project\": 1,\n        \"nama_project\": \"Indoor\",\n        \"id_role\": 2,\n        \"nama_role\": \"teknisi\",\n        \"name\": \"Johnko\",\n        \"nip\": \"123456789\",\n        \"notlp\": \"081234567890\",\n        \"alamat\": \"Yogyakarta\",\n        \"email\": \"johnko@email.com\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_project\": 1,\r\n    \"id_role\": 2,\r\n    \"name\": \"Johnwick\",\r\n    \"nip\": \"123456789\",\r\n    \"notlp\": \"081234567890\",\r\n    \"alamat\": \"Kulon Progo\",\r\n    \"email\": \"johnko@email.com\",\r\n    \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/user/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "user",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update User Sukses",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id_project\": 1,\r\n    \"id_role\": 2,\r\n    \"name\": \"Johnwick\",\r\n    \"nip\": \"123456789\",\r\n    \"notlp\": \"081234567890\",\r\n    \"alamat\": \"Kulon Progo\",\r\n    \"email\": \"johnko@email.com\",\r\n    \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/user/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:12:36 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data user berhasil diperbarui\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 4,\n        \"id_project\": 1,\n        \"id_role\": 2,\n        \"name\": \"Johnwick\",\n        \"nip\": \"123456789\",\n        \"notlp\": \"081234567890\",\n        \"alamat\": \"Kulon Progo\",\n        \"email\": \"johnko@email.com\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/user/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "user",
+                "5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete User Gagal",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/user/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user",
+                    "4"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:19:24 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized. Required akses(s): delete_user\",\n    \"status_code\": 403,\n    \"data\": null\n}"
+            },
+            {
+              "name": "Delete User Sukses",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/user/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "user",
+                    "5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:26:24 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User berhasil dihapus\",\n    \"status_code\": 200\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kerusakan",
+      "item": [
+        {
+          "name": "Get All Kerusakan Project",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Kerusakan Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:30:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data kerusakan berhasil diambil\",\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"id\": 6,\n            \"user_id\": 2,\n            \"id_project\": 2,\n            \"id_lokasi\": 3,\n            \"id_fasilitas\": 10,\n            \"tanggal\": \"2026-07-13\",\n            \"lat_posisi\": \"-7.9311457\",\n            \"lng_posisi\": \"110.3241633\",\n            \"deskripsi\": \"Mati\",\n            \"foto_kerusakan\": \"http://localhost:8000/storage/bukti_kerusakan/h06M3XvkZ9YW3EPyxe1b1TDofYF3mWUKNYv7pm85.jpg\",\n            \"foto_perbaikan\": \"http://localhost:8000/storage/bukti_perbaikan/G9NVFR9G5ZapEdFPsc1muUFBrtPfbvhyU7ZsgwJa.jpg\",\n            \"status\": \"selesai\",\n            \"user\": \"Joko Oke\",\n            \"role\": \"teknisi\",\n            \"fasilitas\": \"Lampu Penerangan\",\n            \"project\": \"Outdoor\",\n            \"lokasi\": \"Lapangan Parkir\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Kerusakan",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "user_id",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "35cc1af2-8b67-41fb-ba40-3b2746235e1c"
+                },
+                {
+                  "key": "id_lokasi",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "f390d141-79ca-47b7-ae74-78c8411a6073"
+                },
+                {
+                  "key": "id_fasilitas",
+                  "value": "10",
+                  "type": "text",
+                  "uuid": "d9c2848e-412a-4501-828c-8bda3f9dd7b0"
+                },
+                {
+                  "key": "tanggal",
+                  "value": "2026-07-16",
+                  "type": "text",
+                  "uuid": "2ab56622-9e38-4123-8299-e0097a4f2770"
+                },
+                {
+                  "key": "lat_posisi",
+                  "value": "-7.9311457",
+                  "type": "text",
+                  "uuid": "664b6d68-b2e1-4ae0-ba80-89b9a069df30"
+                },
+                {
+                  "key": "lng_posisi",
+                  "value": "110.3241633",
+                  "type": "text",
+                  "uuid": "7aff0348-f07d-4a91-9314-2f512cc95a46"
+                },
+                {
+                  "key": "deskripsi",
+                  "value": "Rusak parah pecah",
+                  "type": "text",
+                  "uuid": "e71adf7f-9dfe-444a-9090-563a594b6058"
+                },
+                {
+                  "key": "foto_kerusakan",
+                  "type": "file",
+                  "uuid": "9b1d3058-aae7-46ec-bd71-cbc68869a262",
+                  "src": "/C:/Users/A S U S/Downloads/Screenshot_20260707-185808.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kerusakan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "kerusakan"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Kerusakan",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "user_id",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "35cc1af2-8b67-41fb-ba40-3b2746235e1c"
+                    },
+                    {
+                      "key": "id_lokasi",
+                      "value": "3",
+                      "type": "text",
+                      "uuid": "f390d141-79ca-47b7-ae74-78c8411a6073"
+                    },
+                    {
+                      "key": "id_fasilitas",
+                      "value": "10",
+                      "type": "text",
+                      "uuid": "d9c2848e-412a-4501-828c-8bda3f9dd7b0"
+                    },
+                    {
+                      "key": "tanggal",
+                      "value": "2026-07-16",
+                      "type": "text",
+                      "uuid": "2ab56622-9e38-4123-8299-e0097a4f2770"
+                    },
+                    {
+                      "key": "lat_posisi",
+                      "value": "-7.9311457",
+                      "type": "text",
+                      "uuid": "664b6d68-b2e1-4ae0-ba80-89b9a069df30"
+                    },
+                    {
+                      "key": "lng_posisi",
+                      "value": "110.3241633",
+                      "type": "text",
+                      "uuid": "7aff0348-f07d-4a91-9314-2f512cc95a46"
+                    },
+                    {
+                      "key": "deskripsi",
+                      "value": "Rusak parah pecah",
+                      "type": "text",
+                      "uuid": "e71adf7f-9dfe-444a-9090-563a594b6058"
+                    },
+                    {
+                      "key": "foto_kerusakan",
+                      "type": "file",
+                      "uuid": "9b1d3058-aae7-46ec-bd71-cbc68869a262",
+                      "src": "/C:/Users/A S U S/Downloads/Screenshot_20260707-185808.jpg"
+                    }
+                  ],
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:43:25 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Kerusakan berhasil ditambahkan\",\n    \"status_code\": 201,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"user_id\": \"2\",\n            \"id_project\": 2,\n            \"id_lokasi\": \"3\",\n            \"id_fasilitas\": \"10\",\n            \"tanggal\": \"2026-07-16\",\n            \"lat_posisi\": \"-7.9311457\",\n            \"lng_posisi\": \"110.3241633\",\n            \"deskripsi\": \"Rusak parah pecah\",\n            \"foto_kerusakan\": \"http://localhost:8000/storage/bukti_kerusakan/akg9IXGbR9BAE5xlcvPnD1NOaDpkZvMSVcVjx8nF.jpg\",\n            \"status\": \"pending\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"diperbaiki\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kerusakan/6/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "kerusakan",
+                "6",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Status",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"diperbaiki\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan/6/status",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan",
+                    "6",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:35:22 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Status berhasil diupdate\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 6,\n        \"status\": \"diperbaiki\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Kerusakan Admin",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kerusakan/admin",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "kerusakan",
+                "admin"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Kerusakan Admin",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan/admin",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan",
+                    "admin"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 10:37:31 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Data kerusakan berhasil diambil\",\n    \"status_code\": 200,\n    \"total_kerusakan\": 2,\n    \"total_perbaikan\": 1,\n    \"total_selesai\": 0,\n    \"data\": [\n        {\n            \"id\": 6,\n            \"user_id\": 2,\n            \"id_project\": 2,\n            \"id_lokasi\": 3,\n            \"id_fasilitas\": 10,\n            \"tanggal\": \"2026-07-13\",\n            \"lat_posisi\": \"-7.9311457\",\n            \"lng_posisi\": \"110.3241633\",\n            \"deskripsi\": \"Mati\",\n            \"foto_kerusakan\": \"http://localhost:8000/storage/bukti_kerusakan/h06M3XvkZ9YW3EPyxe1b1TDofYF3mWUKNYv7pm85.jpg\",\n            \"foto_perbaikan\": \"http://localhost:8000/storage/bukti_perbaikan/G9NVFR9G5ZapEdFPsc1muUFBrtPfbvhyU7ZsgwJa.jpg\",\n            \"status\": \"diperbaiki\",\n            \"user\": \"Joko Oke\",\n            \"role\": \"teknisi\",\n            \"fasilitas\": \"Lampu Penerangan\",\n            \"project\": \"Outdoor\",\n            \"lokasi\": \"Lapangan Parkir\"\n        },\n        {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"id_project\": 1,\n            \"id_lokasi\": 1,\n            \"id_fasilitas\": 2,\n            \"tanggal\": \"2026-07-06\",\n            \"lat_posisi\": \"-7.9311818\",\n            \"lng_posisi\": \"110.3241189\",\n            \"deskripsi\": \"rusak cuy\",\n            \"foto_kerusakan\": \"http://localhost:8000/storage/bukti_kerusakan/8D5OGb15jXRyP4ITouYWBBw7fjiXo4UHMKagqo8z.jpg\",\n            \"foto_perbaikan\": null,\n            \"status\": \"pending\",\n            \"user\": \"Joko Oke\",\n            \"role\": \"teknisi\",\n            \"fasilitas\": \"Pendingin Ruangan\",\n            \"project\": \"Indoor\",\n            \"lokasi\": \"Ruang Meeting\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Perbaikan",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "kerusakan_id",
+                  "value": "7",
+                  "type": "text",
+                  "uuid": "35cc1af2-8b67-41fb-ba40-3b2746235e1c"
+                },
+                {
+                  "key": "tanggal_perbaikan",
+                  "value": "2026-07-16",
+                  "type": "text",
+                  "uuid": "2ab56622-9e38-4123-8299-e0097a4f2770"
+                },
+                {
+                  "key": "deskripsi_perbaikan",
+                  "value": "Ganti bolam",
+                  "type": "text",
+                  "uuid": "e71adf7f-9dfe-444a-9090-563a594b6058"
+                },
+                {
+                  "key": "foto_perbaikan",
+                  "type": "file",
+                  "uuid": "9b1d3058-aae7-46ec-bd71-cbc68869a262",
+                  "src": "/C:/Users/A S U S/Downloads/Screenshot_20260707-185808.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kerusakan/perbaikan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "kerusakan",
+                "perbaikan"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Perbaikan",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "kerusakan_id",
+                      "value": "7",
+                      "type": "text",
+                      "uuid": "84420011-659a-4ada-a85f-bff2d9bd6812"
+                    },
+                    {
+                      "key": "tanggal_perbaikan",
+                      "value": "2026-07-16",
+                      "type": "text",
+                      "uuid": "69ec928e-de9e-4b40-9274-a33ad0f9ad53"
+                    },
+                    {
+                      "key": "deskripsi_perbaikan",
+                      "value": "Diganti baru",
+                      "type": "text",
+                      "uuid": "7a952953-c626-49ed-8fe8-f2283b103721"
+                    },
+                    {
+                      "key": "foto_perbaikan",
+                      "type": "file",
+                      "uuid": "295758d5-2573-45f8-b071-adf523a60b9f",
+                      "src": "/C:/Users/A S U S/Downloads/Screenshot_20260710-195921.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan/perbaikan",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan",
+                    "perbaikan"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 11:18:51 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Laporan perbaikan berhasil ditambahkan\",\n    \"status_code\": 200,\n    \"data\": {\n        \"id\": 7,\n        \"tanggal_perbaikan\": \"2026-07-16\",\n        \"deskripsi_perbaikan\": \"Diganti baru\",\n        \"foto_perbaikan\": \"http://localhost:8000/storage/bukti_perbaikan/6DkY0SWZxvimw7Xrl1NlXLcLfwiQmqgJHzeKZ1a0.jpg\",\n        \"status\": \"selesai\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Kerusakan",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorization_secret}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kerusakan/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "kerusakan",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Kerusakan Telah Selesai",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan/7",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan",
+                    "7"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 11:23:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Kerusakan hanya bisa dihapus jika masih pending\",\n    \"status_code\": 403\n}"
+            },
+            {
+              "name": "Delete Kerusakan Sukses",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/kerusakan/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "kerusakan",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.3.17"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 11:26:30 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Kerusakan berhasil dihapus\",\n    \"status_code\": 200\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://farming-simulator.pstmn.io"
+    }
+  ]
+}
